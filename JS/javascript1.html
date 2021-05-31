@@ -31,14 +31,14 @@
         /*ejercicio 4*/
         function a(b) {     //b=3
             console.log(b);
-            return b * 3; //return 3*3
+            return b * 3; //return 3*3; return 9;
         }
         console.log(a(3)); //console.log(9)
         //respt: 3,9
 
         /*ejercicio 5*/
         function a(b) { //b=10
-            return b * 4; //return 10 * 4;
+            return b * 4; //return 10 * 4;return 40;
             console.log(b); //NUNCA SE VA A EJECUTAR
         }
         console.log(a(10)); //console.log(40)
@@ -60,7 +60,7 @@
 
         /*ejercicio 7*/
         function a(b, c) { //b= 3;c= 10
-            return b * c; //return 3 * 10
+            return b * c; //return 3 * 10;return 30;
         }
         console.log(10, 3);
         console.log(a(3, 10)); //console.log(30)
@@ -76,6 +76,18 @@
         console.log(3);
         console.log(4);
         //respt.:3,4
+
+        /* ejercicio 9*/
+        function a() {
+            //variable = variable + algo; acumulador
+            //i++ -> i = i + 1
+            for (var i = 0; i < 10; i++) { //i=0>2>3>5>6>8>9>11>12
+                i = i + 2; //
+                console.log(i);
+            }
+        }
+        a(); //llamado a la función
+        //respt:2,5,8,11
     </script>
     <style>
         * {
@@ -107,6 +119,7 @@
             <li>li con viñeta</li>
             <li>li con viñeta</li>
         </ul>
+        <input type="button" value="" onclick="a()">
     </div>
 </body>
 
