@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 68::</title>
+    <script>
+        /* Ejercicios Javascript Basic*/
+        function a() {
+            return 35;
+        }
+        console.log(a()) //console.log(35)
+            //respuesta: 35
+
+        /*ejercicio 2 */
+        function a() {
+            return 4;
+        }
+        console.log(a() + a()); //console.log(4 + 4)
+        //respt: 8
+
+        /*ejercicio 3*/
+        function a(b) {
+            return b;
+        }
+        console.log(a(2) + a(4)); //console.log(2 + 4)
+        //respt.:
+
+        /*ejercicio 4*/
+        function a(b) {     //b=3
+            console.log(b);
+            return b * 3; //return 3*3
+        }
+        console.log(a(3)); //console.log(9)
+        //respt: 3,9
+
+        /*ejercicio 5*/
+        function a(b) { //b=10
+            return b * 4; //return 10 * 4;
+            console.log(b); //NUNCA SE VA A EJECUTAR
+        }
+        console.log(a(10)); //console.log(40)
+        //respt:40
+
+        /*ejercicio 6*/
+        function a(b) { //b= 15
+            if (b < 10) {
+                return 2;
+            }    
+            else {
+                return 4;
+            }
+            console.log(b); //Nunca se ejecutara
+        }
+
+        console.log(a(15)); //console.log(4)
+        //respt.: 4
+
+        /*ejercicio 7*/
+        function a(b, c) { //b= 3;c= 10
+            return b * c; //return 3 * 10
+        }
+        console.log(10, 3);
+        console.log(a(3, 10)); //console.log(30)
+        //respt.:10,3,30
+
+        /*ejercicio 8*/
+        function a(b) {
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            return i;
+        }
+        console.log(3);
+        console.log(4);
+        //respt.:3,4
+    </script>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        ul {
+            /* Quitamos los marcadores (marker) */
+            list-style: none;
+        }
+        /* contenido antes elemento del li */
+        
+        li::before {
+            /* Insertamos » */
+            content: "»";
+            /* espacio entre el marker y el li */
+            padding-right: 8px;
+            /* Coloreamos la viñeta */
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>li con viñeta</li>
+            <li>li con viñeta</li>
+            <li>li con viñeta</li>
+        </ul>
+    </div>
+</body>
+
+</html>
