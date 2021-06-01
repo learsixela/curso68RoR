@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios Básicos</title>
+
     <script>
         console.log("Ejercicios Básicos");
         /* Ejercicio 1*/
@@ -86,6 +87,20 @@
 
         console.log("resultado 4.1: " + iteraUnArray([1, 2, 5]));
         console.log("resultado 4.2: " + iteraUnArray([-5, 2, 5, 12]));
+        /*ejercicio 5*/
+
+        function encuentraElMayor(array) {
+            var numeroMayor = array[0]; //se inicializa para comparar el primer elemento del array
+            for (var i = 0; i < array.length; i++) {
+                if (numeroMayor < array[i]) { //si se cumple la condicion
+                    numeroMayor = array[i]; // se reemplaza el valor 
+                }
+            }
+
+            return numeroMayor;
+        }
+        console.log(encuentraElMayor([-3, -1, -5]));
+        console.log(encuentraElMayor([-3, 3, 5, 7]));
     </script>
 </head>
 
@@ -97,7 +112,7 @@
             <li><b>Consigue pares hasta 1000:</b> Escribe una función que entregue la suma de todos los números pares del 1 al 1000 - Puedes usar un operador de módulo para este ejercicio. </li>
             <li><b>Suma impares hasta 5000:</b> Escribe una función que devuelva la suma de todos los números impares entre 1 y 5000 (ej: 1+3+5+...+4997+4999).</li>
             <li><b>Itera un array:</b> Escribe una función que devuelva la suma de todos los valores dentro de un array (ej: [1,2,5] retorna 8. [-5,2,5,12] retorna 14). </li>
-            <li><b></b></li>
+            <li><b>Encuentra el mayor (max):</b> Dado un array con múltiples valores, escribe una función que devuelva el número mayor (ej: para [-3,3,5,7] el número mayor (max) es 7). </li>
         </ol>
     </div>
 </body>
