@@ -128,8 +128,68 @@
             return sum;
         }
         //rept.:
-        /**/
+
+        /*ejercicio 9*/
+        //obtener el promedio de los numeros en el arreglo
+        function printAverage(x) { //x = [1, 2, 3]
+            sum = 0; //6
+            for (let i = 0; i < x.length; i++) { //i=3
+                sum = sum + x[i];
+            }
+            /*var promedio = sum /x.length;
+            return promedio;*/
+            return sum / x.length;
+        }
+        /* 
+        function printAverage2(x) {//[2, 5, 8]
+            sum=0;//7.5
+            for(let i =0; i<x.length;i++){
+                sum = sum + (x[i]/2);
+            }
+
+            return sum;
+        }*/
+
+        y = printAverage([1, 2, 3]); //y= 2
+        console.log(y); // should log 2
+
+        y = printAverage([2, 5, 8]); //y = 5
+        console.log(y); // should log 5
+
+        /*ejercicio 10*/
+        /*Crea un array con todos los enteros impares (odd integers)
+        entre 1 y 255 (inclusive)*/
+        function returnOddArray() {
+            var array = [];
+            for (let i = 1; i <= 255; i += 2) {
+                array.push(i);
+            }
+            return array;
+        }
+        y = returnOddArray();
+        console.log(y); // should log [1,3,5,...,253,255]
+        //resp.:
+
+        /*ejercicio 11*/
+        /*eleva cada elemento del array dado al cuadrado 
+        y retorna el mismo arreglo*/
+        function squareValue(x) { //x= [2, 5, 8];
+
+            for (let i = 0; i < x.length; i++) { //i=3
+                x[i] = x[i] * x[i]; //
+                //x[i] = Math.pow(x[i],10)
+            }
+
+            return x; //return [4,25,64];
+        }
+
+        y = squareValue([1, 2, 3]);
+        console.log(y); // should log [1,4,9]
+
+        y = squareValue([2, 5, 8]);
+        console.log(y); // should log [4,25,64]
     </script>
+
 </head>
 
 <body>
