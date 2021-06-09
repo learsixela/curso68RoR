@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos 4::</title>
+    <script>
+        /*ejercicio 1*/
+
+        /*Dados un array y un valor Y, 
+        cuenta e imprime (console.log()) el número de valores del array 
+        que sean mayores que Y. */
+
+        function valorMayorQueY(arreglo, y) {
+            var contador = 0; //definicion de variable
+            //siempre se usa (este for) para recorrer el arreglo desde 0 al ultimo elemento
+            for (let i = 0; i < arreglo.length; i++) {
+                if (arreglo[i] > y) { //arreglo[i], se utiliza para acceder a los elemento a traves de la posicion
+                    contador = contador + 1; //acumulando valores
+                }
+            }
+            console.log("cantidad de valores mayores que Y es: " + contador);
+        }
+        valorMayorQueY([3, 6, 9, 2, 5], 4);
+
+        /*** opcion 2***/
+        function valorMayorQueY2(arreglo, y) {
+            var array = [];
+            for (let i = 0; i < arreglo.length; i++) {
+                if (arreglo[i] > y) {
+                    array.push(arreglo[i]); //agrega al final del array
+                }
+            }
+            console.log("cantidad de valores mayores que Y es: " + array.length);
+            return array;
+        }
+        console.log(valorMayorQueY2([3, 6, 9, 2, 5], 4));
+
+        /*ejercicio 2*/
+
+        /*Dado un array, 
+        imprime los valores: máximos (max), 
+        mínimos (min) y promedio (average) 
+        para el array. */
+
+        function maxMinProm(array) { //array = [4,-3,6,-8,2,5]
+            var maximo = array[0]; //4; array[0], se utiliza para evaluar desde esa posicion
+            var minimo = array[0]; //4
+            var suma = 0;
+
+            for (let i = 0; i < array.length; i++) {
+                //suma
+                suma = suma + array[i]; //array[i], se utiliza para acceder a los elemento a traves de la posicion
+
+                //maximo
+                //6        <  5
+                if (maximo < array[i]) { //obtener el valor mas grande
+                    maximo = array[i];
+                }
+                //minimo
+                // -8      >
+                if (minimo > array[i]) { //obtener el valor mas pequeño
+                    minimo = array[i];
+                }
+            }
+            var promedio = suma / array.length;
+            console.log("El promedio es: " + promedio);
+            console.log("El numero maximo es:" + maximo);
+            console.log("El número minimo es: " + minimo);
+        }
+
+        maxMinProm([4, -3, 6, -8, 2, 5]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
