@@ -70,10 +70,13 @@
                     $('#text1').addClass('alertaMsg');
                     $('#text2').addClass('fondo');
                 } else {
-                    alert(parseFloat(valText1) + Number(valText2));
+                    if (Number(valText2) == 0) {
+                        $('#boton6').after('<p id=alerta>No se puede dividir por cero </p>');
+                        $('#alerta').addClass('alertaMsg');
+                    } else {
+                        alert(parseFloat(valText1) / Number(valText2));
+                    }
                 }
-
-
             });
 
             //fin JQuery    
