@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THIS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('document').ready(function() {
+            //$('').accion(function(){});
+
+            $('button').click(function() {
+                $('img').show(); //show() mostrar el elemento
+            });
+
+            /*
+                        $('#image1').click(function() {
+                            $('#image1').hide(); //ocultar el elemento (img)
+                        });
+                        $('#image2').click(function() {
+                            $('#image2').hide();
+                        });
+                        $('#image3').click(function() {
+                            $('#image3').hide();
+                        });
+                        $('#image4').click(function() {
+                            $('#image4').hide();
+                        });
+                        $('#image5').click(function() {
+                            $('#image5').hide();
+                        });*/
+
+            /* $('img').click(function() {
+                $('#image1').hide();
+                $('#image2').hide();
+                $('#image3').hide();
+                $('#image4').hide();
+                $('#image5').hide();
+            });*/
+
+            $('img').click(function() {
+                $(this).hide(); //captura el evento y quien lo gatilló
+                console.log($(this));
+                alert($(this)[0].id + " " + $(this)[0].currentSrc);
+            });
+
+            //fin JQuery
+        });
+    </script>
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="tux.png" alt="tux" id="image1">
+        <img src="tux.png" alt="tux" id="image2">
+        <img src="tux.png" alt="tux" id="image3">
+        <img src="tux.png" alt="tux" id="image4">
+        <img src="tux.png" alt="tux" id="image5">
+        <br>
+        <button>this</button>
+    </div>
+</body>
+
+</html>
